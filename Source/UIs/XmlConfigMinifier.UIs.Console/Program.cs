@@ -13,7 +13,7 @@ namespace XmlConfigMinifier.UIs.ConsoleApp
         static void Main(string[] args)
         {
             int verbosity = 0;
-            var whitespaces = false;
+            var includeWhitespaces = true;
             var indentation = 1;
             bool showHelp = false;
             bool removeComments = true;
@@ -23,8 +23,8 @@ namespace XmlConfigMinifier.UIs.ConsoleApp
             var p = new OptionSet() {
                 { "file|f=", "Path to Xml config file/s to minify. For multiple files use double quotes and separate with commas.",
                   (string v) => fileNames.AddRange (v.Split(',')) },
-                { "whitespace|w=", "include whitespaces (true|false). Default == false.",
-                  (bool v) => whitespaces = v },
+                { "whitespace|w", "Remove whitespaces.",
+                  v => includeWhitespaces = !(v!=null) },
                 { "indentation|i=", "config indentation. Default == 1.",
                   (int v) => indentation = v },
                 { "v|verbose", "increase debug message verbosity",
@@ -38,7 +38,7 @@ namespace XmlConfigMinifier.UIs.ConsoleApp
             try
             {
                 var extra = p.Parse(args);
-                Debug(verbosity,"We've received some extra parameters : {0}",string.Concat(extra));
+                Debug(verbosity, "We've received some extra parameters : {0}", string.Concat(extra));
             }
             catch (OptionException e)
             {
@@ -63,7 +63,9 @@ namespace XmlConfigMinifier.UIs.ConsoleApp
                     try
                     {
                         xmlString = File.ReadAllText(fileName);
-                        XmlConfigMinifierCore.Minify(xmlString, indentation, removeComments, whitespaces);
+                        var xmlStringMinified = XmlConfigMinifierCore.Minify(xmlString, indentation, removeComments, includeWhitespaces);
+                        File.WriteAllText(fileName, xmlStringMinified);
+                        Console.WriteLine("Minification finished successfully");
                     }
                     catch (Exception e)
                     {
