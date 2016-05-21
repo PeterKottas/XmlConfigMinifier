@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UIs", "UIs", "{C6BC100D-45DB-4E4D-A9F1-973027A24FB2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{34BBD909-B245-4784-A98A-9744F295F62C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlConfigMinifier.UIs.ConsoleApp", "..\Source\UIs\XmlConfigMinifier.UIs.Console\XmlConfigMinifier.UIs.ConsoleApp.csproj", "{2E3D79C2-FBDF-4DC8-A46B-304FF2BCA18D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlConfigMinifier.UIs.XmlConfigMinifier", "..\Source\Plugins\XmlConfigMinifier.UIs.XmlConfigMinifier\XmlConfigMinifier.UIs.XmlConfigMinifier.csproj", "{2202A9D6-EB29-4B97-B412-402BCBA03858}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E3D79C2-FBDF-4DC8-A46B-304FF2BCA18D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E3D79C2-FBDF-4DC8-A46B-304FF2BCA18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E3D79C2-FBDF-4DC8-A46B-304FF2BCA18D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E3D79C2-FBDF-4DC8-A46B-304FF2BCA18D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2202A9D6-EB29-4B97-B412-402BCBA03858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2202A9D6-EB29-4B97-B412-402BCBA03858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2202A9D6-EB29-4B97-B412-402BCBA03858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2202A9D6-EB29-4B97-B412-402BCBA03858}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2E3D79C2-FBDF-4DC8-A46B-304FF2BCA18D} = {C6BC100D-45DB-4E4D-A9F1-973027A24FB2}
+		{2202A9D6-EB29-4B97-B412-402BCBA03858} = {34BBD909-B245-4784-A98A-9744F295F62C}
+	EndGlobalSection
+EndGlobal
