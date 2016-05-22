@@ -32,7 +32,7 @@ namespace XmlConfigMinifier.UIs.ConsoleApp
                 { "h|help",  "show this message and exit", 
                   v => showHelp = v != null },
                 { "c|comments",  "remove comments (true|false). Default == true.", 
-                  (bool v) => removeComments = v != null },
+                  v => removeComments = v != null },
             };
 
             try
